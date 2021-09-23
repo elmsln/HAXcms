@@ -35,11 +35,9 @@ date, use a ternary operator:
     {{ post.published_at is empty ? "" : post.published_at|date("m/d/Y") }}
 
 If no format is provided, Twig will use the default one: ``F j, Y H:i``. This
-default can be easily changed by calling the ``setDateFormat()`` method on the
+default can be changed by calling the ``setDateFormat()`` method on the
 ``core`` extension instance. The first argument is the default format for
-dates and the second one is the default format for date intervals:
-
-.. code-block:: php
+dates and the second one is the default format for date intervals::
 
     $twig = new \Twig\Environment($loader);
     $twig->getExtension(\Twig\Extension\CoreExtension::class)->setDateFormat('d/m/Y', '%d days');
@@ -62,9 +60,7 @@ timezone, pass ``false`` as the timezone value:
 
     {{ post.published_at|date("m/d/Y", false) }}
 
-The default timezone can also be set globally by calling ``setTimezone()``:
-
-.. code-block:: php
+The default timezone can also be set globally by calling ``setTimezone()``::
 
     $twig = new \Twig\Environment($loader);
     $twig->getExtension(\Twig\Extension\CoreExtension::class)->setTimezone('Europe/Paris');
@@ -75,8 +71,8 @@ Arguments
 * ``format``:   The date format
 * ``timezone``: The date timezone
 
-.. _`strtotime`:            https://secure.php.net/strtotime
-.. _`DateTime`:             https://secure.php.net/DateTime
-.. _`DateInterval`:         https://secure.php.net/DateInterval
-.. _`date`:                 https://secure.php.net/date
-.. _`DateInterval::format`: https://secure.php.net/DateInterval.format
+.. _`strtotime`:            https://www.php.net/strtotime
+.. _`DateTime`:             https://www.php.net/DateTime
+.. _`DateInterval`:         https://www.php.net/DateInterval
+.. _`date`:                 https://www.php.net/date
+.. _`DateInterval::format`: https://www.php.net/DateInterval.format
