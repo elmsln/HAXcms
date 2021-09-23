@@ -94,13 +94,11 @@ Custom Escapers
 ---------------
 
 You can define custom escapers by calling the ``setEscaper()`` method on the
-``core`` extension instance. The first argument is the escaper name (to be
-used in the ``escape`` call) and the second one must be a valid PHP callable:
-
-.. code-block:: php
+escaper extension instance. The first argument is the escaper name (to be
+used in the ``escape`` call) and the second one must be a valid PHP callable::
 
     $twig = new \Twig\Environment($loader);
-    $twig->getExtension(\Twig\Extension\CoreExtension::class)->setEscaper('csv', 'csv_escaper');
+    $twig->getExtension(\Twig\Extension\EscaperExtension::class)->setEscaper('csv', 'csv_escaper');
 
 When called by Twig, the callable receives the Twig environment instance, the
 string to escape, and the charset.
@@ -116,4 +114,4 @@ Arguments
 * ``strategy``: The escaping strategy
 * ``charset``:  The string charset
 
-.. _`htmlspecialchars`: https://secure.php.net/htmlspecialchars
+.. _`htmlspecialchars`: https://www.php.net/htmlspecialchars

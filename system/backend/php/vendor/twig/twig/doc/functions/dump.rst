@@ -28,7 +28,7 @@ introspecting its variables:
 In an HTML context, wrap the output with a ``pre`` tag to make it easier to
 read:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     <pre>
         {{ dump(user) }}
@@ -63,4 +63,4 @@ Arguments
 * ``context``: The context to dump
 
 .. _`XDebug`:   https://xdebug.org/docs/display
-.. _`var_dump`: https://secure.php.net/var_dump
+.. _`var_dump`: https://www.php.net/var_dump

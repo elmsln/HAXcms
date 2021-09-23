@@ -10,7 +10,7 @@ by one space:
 
 You can also provide tags which should not be stripped:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {{ some_html|striptags('<br><p>') }}
 
@@ -26,4 +26,4 @@ Arguments
 
 * ``allowable_tags``: Tags which should not be stripped
 
-.. _`strip_tags`: https://secure.php.net/strip_tags
+.. _`strip_tags`: https://www.php.net/strip_tags
